@@ -6,7 +6,8 @@ ENV PATH $PATH:/opt/go/bin
 RUN apt-get update && apt-get install -qy \
     pkg-config \
     libmagickwand-dev \
-    golang
+    golang \
+    git
 
 WORKDIR /opt/go
 
