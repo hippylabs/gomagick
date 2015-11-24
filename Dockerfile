@@ -5,7 +5,6 @@ RUN apt-get update && \
     apt-get install -qy \
         pkg-config \
         libmagickwand-dev \
-        golang \
         git \
         wet &&\
     wget https://storage.googleapis.com/golang/go1.5.1.linux-amd64.tar.gz && \
