@@ -6,18 +6,17 @@ RUN apt-get update && \
         pkg-config \
         libmagickwand-dev \
         git \
-        wet &&\
+        wget && \
+
+    #installing golang 1.5.1    
     wget https://storage.googleapis.com/golang/go1.5.1.linux-amd64.tar.gz && \
     tar -xzf go1.5.1.linux-amd64.tar.gz -C /usr/local && \
-    
+
     #clear up
     apt-get remove -y wet && \
     apt-get autoremove -y && \
     apt-get autoclean && \
-    apt-get clean && \
-
-#Clear up
-
+    apt-get clean
 
 ENV GOPATH /opt/go
 ENV PATH $PATH:/opt/go/bin:/usr/local/go/bin
