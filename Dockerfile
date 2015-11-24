@@ -9,11 +9,11 @@ RUN apt-get update && \
         wget && \
 
     #installing golang 1.5.1    
-    wget https://storage.googleapis.com/golang/go1.5.1.linux-amd64.tar.gz && \
+    wget -nv https://storage.googleapis.com/golang/go1.5.1.linux-amd64.tar.gz && \
     tar -xzf go1.5.1.linux-amd64.tar.gz -C /usr/local && \
 
     #clear up
-    apt-get remove -y wet && \
+    apt-get remove -y wget && \
     apt-get autoremove -y && \
     apt-get autoclean && \
     apt-get clean
